@@ -25,15 +25,9 @@ void s7sSendStringSPI(String toSend) {
 	//digitalWrite(SSD, HIGH);
 }
 
-//return the number of buckets sampled
-int bucketNumber() {
-	int numBuckets;
-	if (sampleSaved()) {
-		numBuckets++;
-	}
-	return numBuckets;
-}
 
+//----------------------------------------
+//SAVING
 void saveSample() {
 	//save the sample taken
 }
@@ -46,11 +40,8 @@ bool sampleSaved() {
 	//}
 	return saved;
 }
+//----------------------------------------
 
-
-int updateDensity() {
-	//calculate the density of the sample
-}
 
 void newSampleSet() {
 	//create new list/array of samples
@@ -60,6 +51,26 @@ void eraseAll() {
 	//erases all the sampled sets
 }
 
-void undoSample() {
+void clearSample() {
 	//erases density of current sample
+}
+
+void back() {
+	//returns user to previous screen
+}
+
+//--------------------------------------
+//BUCKET RELATED CALCULATIONS
+
+//return the number of buckets sampled
+int bucketNumber() {
+	int numBuckets;
+	if (sampleSaved()) {
+		numBuckets++;
+	}
+	return numBuckets;
+}
+
+int updateDensity() {
+	//calculate the density of the sample
 }

@@ -12,17 +12,6 @@ bool saveButtonPressed() {
 	return false;
 }
 
-bool eraseAllButtonPressed() {
-	return false;
-}
-
-bool undoButtonPressed() {
-	return false;
-}
-
-bool newSetButtonPressed() {
-	return false;
-}
 
 void displayDensity() {
 

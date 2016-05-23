@@ -6,6 +6,8 @@ Author:	ChaseStLaurent
 
 //--------------------------------------
 //IMPORT LIBRARIES
+#include <gfxfont.h>
+#include <Adafruit_GFX.h>
 #include <SD.h>
 #include <SPI.h>
 #include <Wire.h>
@@ -15,16 +17,14 @@ Author:	ChaseStLaurent
 //--------------------------------------
 //BUTTON SETUP
 
-//Save button connected to digital pin 3
-#define saveButton 3
-//Power button connected to digital pin 5
-#define	powerButton 5
-//Undo button connected to digital pin 6    
-#define	undoButton 6
-//Erase All button connected to digital pin 9
-#define eraseAllButton 9
-//New Set button connected to digital pin 10
-#define newSetButton 10
+//Analog 8-11 are available
+//Save button connected to analog pin 8
+#define saveButton A8
+//Select button connected to analog pin 9
+//#define selectButton 9
+//
+const uint8_t SSSD = 53;
+const uint8_t SSD = 52;
 //----------------------------------------
 
 char tempString[10];

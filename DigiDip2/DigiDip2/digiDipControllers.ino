@@ -20,3 +20,7 @@ void eraseAllContoller() {
 void newSetController() {
 	newSampleSet();
 }
+
+void backButtonController() {
+	back();
+}
