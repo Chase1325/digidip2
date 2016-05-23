@@ -24,7 +24,7 @@ void s7sSendStringSPI(String toSend) {
 	}
 	digitalWrite(SSD, HIGH);
 }
-
+//
 
 //----------------------------------------
 //SAVING
@@ -113,4 +113,8 @@ int updateDensity() {
 int density() {
 	int density = updateDensity();
 	return density;
+}
+
+int bucketNumber() {
+	return NULL;
 }
