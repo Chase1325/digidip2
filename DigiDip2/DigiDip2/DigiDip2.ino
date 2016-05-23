@@ -31,8 +31,9 @@ const uint8_t SSD = 52;
 char tempString[10];
 int sample[];
 
-char testType = NULL;
-uint8_t testDuration = 0;
+char testType[12];
+int testTypeHolder;
+uint8_t testDuration = NULL;
 volatile uint8_t cycle = 1;
 int digiReading = NULL;
 

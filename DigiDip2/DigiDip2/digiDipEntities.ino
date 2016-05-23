@@ -61,10 +61,26 @@ void back() {
 }
 
 void selectTestType() {
+	//Dependant on boundaries
+	testType == "Residential";
+	testType == "Commercial";
 
+	if (testType == "Residential") {
+		testTypeHolder = 0;
+	}
+	else if (testType == "Commercial") {
+		testTypeHolder = 1;
+	}
 }
 
 void selectTestTime() {
+	//Dependant on boundaries
+
+	//
+
+}
+
+void selectBucketArray() {
 
 }
 
@@ -82,7 +98,8 @@ int bucketCount() {
 
 int updateDensity() {
 	int newDensity;
-	switch (testType)
+
+	switch (testTypeHolder)
 	{
 	case 0://Residential
 		newDensity = digiReading;//(MAY NEED TO SCALE)
