@@ -14,9 +14,13 @@ bool saveButtonPressed() {
 
 
 void displayDensity() {
-
+	
 }
 
-void displayBucketCount() {
+void displayBucketNumber() {
+	bucketNumber();
+}
+
+void displayBucketArray() {
 
 }

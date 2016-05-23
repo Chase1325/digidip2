@@ -6,9 +6,9 @@ Entities file for digidip2
 
 
 void clearDisplay() {
-	//digitalWrite(SSD, LOW);
+	digitalWrite(SSD, LOW);
 	Serial.write(0x76); //clear display command
-						//	digitalWrite(SSD, HIGH);
+	digitalWrite(SSD, HIGH);
 }
 
 void error() {
@@ -18,11 +18,11 @@ void error() {
 }
 
 void s7sSendStringSPI(String toSend) {
-	//digitalWrite(SSD, LOW);
+	digitalWrite(SSD, LOW);
 	for (int i = 0; i < 4; i++) {
 		SPI.transfer(toSend[i]);
 	}
-	//digitalWrite(SSD, HIGH);
+	digitalWrite(SSD, HIGH);
 }
 
 
@@ -41,36 +41,59 @@ bool sampleSaved() {
 	return saved;
 }
 //----------------------------------------
+//SENDING
+void sendSample() {
 
+}
+void sendNewSampleSet() {
+
+}
+//----------------------------------------
 
 void newSampleSet() {
-	//create new list/array of samples
-}
-
-void eraseAll() {
-	//erases all the sampled sets
-}
-
-void clearSample() {
-	//erases density of current sample
+	//bucketArray;
+	date;
+	time;
 }
 
 void back() {
 	//returns user to previous screen
 }
 
+void selectTestType() {
+
+}
+
+void selectTestTime() {
+
+}
+
 //--------------------------------------
 //BUCKET RELATED CALCULATIONS
 
 //return the number of buckets sampled
-int bucketNumber() {
-	int numBuckets;
+int bucketCount() {
+	int bucketCount;
 	if (sampleSaved()) {
-		numBuckets++;
+		bucketCount++;
 	}
-	return numBuckets;
+	return bucketCount;
 }
 
 int updateDensity() {
-	//calculate the density of the sample
+	int newDensity;
+	switch (testType)
+	{
+	case 0://Residential
+		newDensity = digiReading;//(MAY NEED TO SCALE)
+		break;
+	case 1: //Commercial
+		newDensity = digiReading;//(MAY NEED TO SCALE)
+		break;
+	}
+}
+
+int density() {
+	int density = updateDensity();
+	return density;
 }

@@ -5,22 +5,42 @@ Controller methods for digidip2
 */
 
 
-void sampleSavedController() {
+void saveSampleController() {
+	saveSample();
+	sampleSaved() == true;
+}
+
+void backButtonController() {
+	back();
+}
+
+void testTypeController() {
+	selectTestType();
+}
+
+void testTimeController() {
+	selectTestTime();
+
+}
+
+void testSizeController() {
+	selectTestSize();
+
+}
+
+void newSampleController() {
+	newSampleSet();
+}
+
+void saveButtonController() {
 	saveSample();
 }
 
-void undoController() {
-	undoSample();
-}
-
-void eraseAllContoller() {
-	eraseAll();
+void editBucketController() {
+	editBucket();
 }
 
 void newSetController() {
 	newSampleSet();
 }
 
-void backButtonController() {
-	back();
-}
